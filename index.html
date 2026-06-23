@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Sombrero &mdash; Authentic Mexican Restaurant</title>
+    <meta
+      name="description"
+      content="El Sombrero in El Monte, CA serves authentic Mexican cuisine including chicken, grill, seafood, steak, wraps, burgers, and more. Casual dining, full bar, happy hour. Call (626) 448-3311."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,600;1,700&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" id="home" data-header>
+      <div class="header-inner">
+
+        <!-- Logo placeholder — replace assets/logo.png with your own file -->
+        <a class="brand" href="#home" aria-label="El Sombrero home">
+          <img
+            class="brand-logo"
+            src="assets/logo.png"
+            alt="El Sombrero logo"
+          />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="site-navigation"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-navigation" data-nav aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <!-- Replace assets/menu.pdf with your actual menu PDF file -->
+          <a href="assets/menu.pdf" target="_blank" rel="noopener">Menu</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+          <div class="nav-social" aria-label="Social media">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social-link">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="nav-social-link">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </nav>
+
+      </div>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ===== 1. HERO ===== -->
+      <section class="hero" aria-labelledby="hero-heading" data-hero>
+        <div class="hero-bg" aria-hidden="true">
+          <!-- Replace assets/hero-1.jpg, hero-2.jpg, hero-3.jpg with your food photos -->
+          <div class="hero-slide is-active" style="background-image:url('assets/hero-1.jpg')" data-hero-slide></div>
+          <div class="hero-slide" style="background-image:url('assets/hero-2.jpg')" data-hero-slide></div>
+          <div class="hero-slide" style="background-image:url('assets/hero-3.jpg')" data-hero-slide></div>
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="section-inner hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Freshly Made</p>
+            <h1 id="hero-heading">
+              <span>Authentic Mexican</span>
+              <span>Cuisine.</span>
+            </h1>
+            <p class="hero-text">
+              Handcrafted recipes passed down through generations &mdash; fresh
+              ingredients, bold spices, and every plate made with love.
+            </p>
+            <div class="button-row">
+              <!-- Replace assets/menu.pdf with your actual menu PDF file -->
+              <a class="btn btn-primary" href="assets/menu.pdf" target="_blank" rel="noopener">View Our Menu</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-dots" role="tablist" aria-label="Hero image slides">
+          <button class="hero-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Slide 1" data-hero-dot></button>
+          <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Slide 2" data-hero-dot></button>
+          <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Slide 3" data-hero-dot></button>
+        </div>
+
+        <button class="hero-arrow hero-prev" type="button" aria-label="Previous slide" data-hero-prev>&#8249;</button>
+        <button class="hero-arrow hero-next" type="button" aria-label="Next slide" data-hero-next>&#8250;</button>
+      </section>
+
+      <!-- ===== 2. OUR MENU ===== -->
+      <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">What We Serve</p>
+            <h2 id="menu-heading">Our Menu</h2>
+            <p>From classic house specialties to refreshing drinks and sweet finishes &mdash; every dish is made fresh, every day.</p>
+          </div>
+
+          <div class="menu-cat-slider-wrap" data-menu-cat-slider>
+            <button class="menu-cat-arrow menu-cat-prev" type="button" aria-label="Previous category" data-menu-cat-prev>&#8249;</button>
+
+            <div class="menu-cat-track-outer">
+              <div class="menu-cat-track" data-menu-cat-track>
+
+                <!-- Replace each assets/*.jpg with your own category photos -->
+                <div class="menu-cat-card">
+                  <div class="menu-cat-img">
+                    <img src="assets/open-bar.jpg" alt="Open Bar drinks at El Sombrero" loading="lazy" />
+                  </div>
+                  <h3>Open Bar</h3>
+                </div>
+
+                <div class="menu-cat-card">
+                  <div class="menu-cat-img">
+                    <img src="assets/appetizers.jpg" alt="Appetizers at El Sombrero" loading="lazy" />
+                  </div>
+                  <h3>Appetizers</h3>
+                </div>
+
+                <div class="menu-cat-card">
+                  <div class="menu-cat-img">
+                    <img src="assets/house-specialties.jpg" alt="House Specialties at El Sombrero" loading="lazy" />
+                  </div>
+                  <h3>House Specialties</h3>
+                </div>
+
+                <div class="menu-cat-card">
+                  <div class="menu-cat-img">
+                    <img src="assets/burgers.jpg" alt="Burgers at El Sombrero" loading="lazy" />
+                  </div>
+                  <h3>Burgers</h3>
+                </div>
+
+                <div class="menu-cat-card">
+                  <div class="menu-cat-img">
+                    <img src="assets/desserts.jpg" alt="Desserts at El Sombrero" loading="lazy" />
+                  </div>
+                  <h3>Desserts</h3>
+                </div>
+
+              </div>
+            </div>
+
+            <button class="menu-cat-arrow menu-cat-next" type="button" aria-label="Next category" data-menu-cat-next>&#8250;</button>
+          </div>
+
+          <div class="menu-cat-dots" role="tablist" aria-label="Menu category slides" data-menu-cat-dots></div>
+
+          <div class="center-action">
+            <!-- Replace assets/menu.pdf with your actual menu PDF file -->
+            <a class="btn btn-primary" href="assets/menu.pdf" target="_blank" rel="noopener">View Full Menu</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. OUR HISTORY ===== -->
+      <section class="about section-light" id="about" aria-labelledby="about-heading">
+        <div class="section-inner about-grid">
+
+          <figure class="about-image-wrap">
+            <!-- Replace assets/about.jpg with your restaurant/team photo -->
+            <img
+              src="assets/about.jpg"
+              alt="Warm interior of El Sombrero restaurant"
+              class="about-img"
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="about-copy">
+            <p class="eyebrow eyebrow-dark">Our Story</p>
+            <h2 id="about-heading">Our History</h2>
+            <p class="about-subheading">A family tradition, one plate at a time.</p>
+            <p>
+              At El Sombrero, we bring the bold, vibrant flavors of Mexico to the heart of El Monte. Our kitchen prepares every dish with fresh ingredients and time-honored recipes, from sizzling fajitas and savory enchiladas to handcrafted tacos and hearty burritos.
+            </p>
+            <p>
+              Whether you&rsquo;re joining us for a family dinner, a quick lunch, or ordering takeout, we are proud to serve delicious Mexican cuisine with friendly service and a welcoming atmosphere. At El Sombrero, every meal is made with care and tradition.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== 4. DAILY SPECIALS ===== -->
+      <section class="specials" id="specials" aria-labelledby="specials-heading">
+        <div class="section-inner">
+          <div class="section-heading section-heading-light">
+            <p class="eyebrow">Limited Time</p>
+            <h2 id="specials-heading">Daily Specials</h2>
+            <p>Great deals fresh every day of the week.</p>
+          </div>
+
+          <div class="specials-grid">
+
+            <div class="special-card">
+              <div class="special-day">Monday</div>
+              <h3>Appetizer Sampler</h3>
+              <p>Assortment of taquitos, mini chimichangas, quesadillas, nachos, chicken wings, and poppers served with guacamole and sour cream.</p>
+            </div>
+
+            <div class="special-card">
+              <div class="special-day">Tuesday</div>
+              <h3>Taco Tuesday</h3>
+              <p>2 tacos. Corn tortilla fried crisp and filled with shredded beef or chicken. Topped with lettuce, cheese, and diced tomato.</p>
+            </div>
+
+            <div class="special-card">
+              <div class="special-day">Wednesday</div>
+              <h3>Fajita Wrap</h3>
+              <p>Filled with rice, cheese, lettuce, and your choice of chicken breast or steak. Sour cream and guacamole on the side.</p>
+            </div>
+
+            <div class="special-card">
+              <div class="special-day">Thursday</div>
+              <h3>Deep Fried Shrimp</h3>
+              <p>Served with french fries and salad.</p>
+            </div>
+
+            <div class="special-card">
+              <div class="special-day">Friday</div>
+              <h3>Bacon Cheeseburger</h3>
+              <p>Served with freshly grilled bacon.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 6. BANQUET ROOM & CATERING ===== -->
+      <section class="banquet-section section-light" id="banquet" aria-labelledby="banquet-heading">
+        <div class="section-inner banquet-grid">
+
+          <div class="banquet-copy">
+            <p class="eyebrow eyebrow-dark">Private Events &amp; Catering</p>
+            <h2 id="banquet-heading">Banquet Room &amp; Catering</h2>
+            <p>
+              Host your next event with El Sombrero. Our banquet room is available
+              for private parties, weddings, quincea&ntilde;eras, birthdays, and
+              corporate events. We also offer buffet-style service for special
+              gatherings, with fresh Mexican dishes prepared for your guests.
+            </p>
+            <a class="btn btn-dark" href="tel:+16264483311">Call to Book</a>
+          </div>
+
+          <figure class="banquet-image-wrap">
+            <!-- Replace assets/banquet.jpg with your banquet room photo -->
+            <img
+              src="assets/banquet.jpg"
+              alt="El Sombrero banquet room set up for a private event"
+              loading="lazy"
+            />
+          </figure>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER / CONTACT ===== -->
+    <footer class="site-footer" id="contact">
+
+      <div class="footer-contact-band">
+        <div class="section-inner footer-contact-grid">
+
+          <!-- Brand + Social -->
+          <div class="footer-contact-col">
+            <img
+              class="footer-logo"
+              src="assets/logo.png"
+              alt="El Sombrero logo"
+            />
+            <p class="footer-tagline">Authentic Mexican cuisine in El Monte, CA &mdash; casual dining, full bar, and happy hour.</p>
+            <div class="social-row" aria-label="Social media links">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                Instagram
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                Facebook
+              </a>
+            </div>
+          </div>
+
+          <!-- Hours -->
+          <div class="footer-contact-col">
+            <h4>Hours</h4>
+            <table class="hours-table" aria-label="Restaurant hours">
+              <tbody>
+                <tr><td>Mon &ndash; Thu</td><td>10:30 AM &ndash; 9:00 PM</td></tr>
+                <tr><td>Fri &amp; Sat</td><td>10:30 AM &ndash; 10:00 PM</td></tr>
+                <tr><td>Sunday</td><td>9:30 AM &ndash; 8:30 PM</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Address & Phone -->
+          <div class="footer-contact-col">
+            <h4>Find Us</h4>
+            <address>
+              3550 Santa Abita Ave<br />
+              El Monte, CA 91731
+            </address>
+            <p><a href="tel:+16264483311">(626) 448-3311</a></p>
+            <a
+              class="btn btn-outline footer-directions-btn"
+              href="https://maps.google.com/?q=3550+Santa+Abita+Ave+El+Monte+CA+91731"
+              target="_blank"
+              rel="noopener"
+            >Get Directions</a>
+          </div>
+
+          <!-- Map -->
+          <div class="footer-contact-col footer-map-col">
+            <!-- Replace src with your actual Google Maps embed URL -->
+            <div class="map-frame">
+              <iframe
+                title="Map to El Sombrero restaurant in El Monte, CA"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=3550+Santa+Abita+Ave+El+Monte+CA+91731&output=embed"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact Us Form -->
+      <div class="footer-contact-form-band">
+        <div class="section-inner footer-form-inner">
+
+          <div class="footer-form-heading">
+            <p class="eyebrow">Get in Touch</p>
+            <h2>Contact Us</h2>
+            <p>Have a question or want to plan an event? Send us a message and we&rsquo;ll get back to you.</p>
+          </div>
+
+          <form class="contact-form" id="contact-form" aria-label="Contact form" novalidate data-contact-form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Maria Garcia" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="maria@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-phone">Phone Number</label>
+              <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="(210) 555-0000" />
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject <span aria-hidden="true">*</span></label>
+              <select id="cf-subject" name="subject" required>
+                <option value="" disabled selected>Select a topic&hellip;</option>
+                <option value="reservation">Table Reservation</option>
+                <option value="catering">Catering / Banquet Inquiry</option>
+                <option value="private">Private Event</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Tell us how we can help&hellip;" required></textarea>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">Send Message</button>
+            <p class="form-note" aria-live="polite" data-form-status></p>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="section-inner footer-bottom-inner">
+          <p>&copy; <span data-year></span> El Sombrero. All Rights Reserved.</p>
+          <p class="footer-credit">Designed by <a href="https://www.singularcreations.net" target="_blank" rel="noopener noreferrer">Singular Creations</a></p>
+        </div>
+      </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
