@@ -444,9 +444,9 @@ address {
   z-index: 1;
   background: linear-gradient(
     100deg,
-    rgba(17,11,4,0.80) 0%,
-    rgba(17,11,4,0.55) 52%,
-    rgba(17,11,4,0.25) 100%
+    rgba(17,11,4,0.55) 0%,
+    rgba(17,11,4,0.25) 52%,
+    rgba(17,11,4,0.05) 100%
   );
 }
 
