@@ -354,3 +354,38 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
   els.forEach(el => observer.observe(el));
 }());
+
+/* ============================================================
+   COOKIE CONSENT BANNER
+   ============================================================ */
+(function initCookieBanner() {
+  const banner  = document.getElementById("cookie-banner");
+  const accept  = document.getElementById("cookie-accept");
+  const deny    = document.getElementById("cookie-deny");
+  const info    = document.getElementById("cookie-settings");
+  if (!banner) return;
+
+  const STORAGE_KEY = "el-sombrero-cookie-consent";
+
+  function dismiss() {
+    banner.hidden = true;
+  }
+
+  if (!localStorage.getItem(STORAGE_KEY)) {
+    banner.hidden = false;
+  }
+
+  accept && accept.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, "accepted");
+    dismiss();
+  });
+
+  deny && deny.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, "denied");
+    dismiss();
+  });
+
+  info && info.addEventListener("click", () => {
+    window.open("https://www.singularcreations.net", "_blank", "noopener");
+  });
+}());
