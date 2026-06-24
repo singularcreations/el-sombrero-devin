@@ -141,6 +141,19 @@ address {
   color: var(--text-muted);
 }
 
+/* ---- Screen reader only ---------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ---- Eyebrow Label --------------------------------------- */
 .eyebrow {
   display: inline-block;
@@ -439,15 +452,7 @@ address {
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    100deg,
-    rgba(17,11,4,0.55) 0%,
-    rgba(17,11,4,0.25) 52%,
-    rgba(17,11,4,0.05) 100%
-  );
+  display: none;
 }
 
 .hero-inner {
@@ -825,20 +830,28 @@ address {
   box-shadow: 0 6px 28px rgba(0,0,0,0.35);
 }
 
-/* Gold top accent stripe */
-.special-card::before {
-  content: "";
-  display: block;
-  height: 4px;
-  background: linear-gradient(90deg, var(--gold), var(--bright-gold));
+/* Card photo */
+.special-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: rgba(17,11,4,0.4);
   flex-shrink: 0;
 }
 
-/* Inner padding wrapper */
-.special-card > *:not(.special-card-inner) {
-  margin-left: 0;
+.special-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms ease;
 }
 
+.special-card:hover .special-card-img img {
+  transform: scale(1.05);
+}
+
+/* Inner padding wrapper */
 .special-card .special-day,
 .special-card h3,
 .special-card p,
